@@ -3,9 +3,19 @@
     border: 0px;
 }
 
+h1{
+    text-align:center;
+}
+
+.centerAlignDiv{
+    display:Flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .gridContainer{
-    width:500px;
-    height:500px;
+    width:960px;
+    height:auto;
   display:flex;
   flex-wrap: wrap;
   justify-content: center;

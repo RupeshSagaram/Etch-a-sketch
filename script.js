@@ -1,27 +1,34 @@
 let container = document.querySelector('#container');
+let btn = document.querySelector('.btn');
 
-for(let i=0; i<=16; i++){
-    /*let divGrid = document.createElement('div');
-     divGrid.classList.add('divGrid');
-     divGrid.style.backgroundColor= 'red';
-     divGrid.style.display = 'flex';
-     divGrid.style.height ='auto';
-     divGrid.style.width = '60px';
-     */
-    for(let j=0; j<=16; j++){
-    let divGrid = document.createElement('div');
-     divGrid.classList.add('divGrid');
-     divGrid.style.backgroundColor= 'cadetblue';
-     divGrid.style.display = 'flex';
-     divGrid.style.height = '60px';
-     divGrid.style.width = '60px'
-     container.appendChild(divGrid);
+
+
+for(let i =0; i<16; i++){
+    let divRow = document.createElement('div');
+    divRow.classList.add('row');
+    divRow.style.display = 'flex';
+    container.appendChild(divRow);
+    for(let j=0; j<16; j++){
+        let divColumn = document.createElement('div');
+        divColumn.classList.add('column');
+        divColumn.style.backgroundColor = 'red';
+        divColumn.style.padding = '1.5rem','0';
+        divRow.appendChild(divColumn); 
     }
+    
+     
 }
- document.querySelectorAll('.divGrid').forEach(divGrid =>{
-    divGrid.addEventListener('mouseover',()=>{
-    divGrid.style.backgroundColor = 'white';
+document.querySelectorAll('.column').forEach(divColumn =>{
+    divColumn.addEventListener('mouseover',()=>{
+        divColumn.style.backgroundColor = 'white';
      }
     )}
   );
+
+  btn.addEventListener('click',()=>{
+    squaresPerSide=prompt(`how many squares per side for the new grid?`);
+    //return squaresPerSide;
+  })
+
+
 

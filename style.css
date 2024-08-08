@@ -7,6 +7,22 @@ h1{
     text-align:center;
 }
 
+.btnDiv{
+    text-align: center;
+    padding: 10px;
+    margin:10px;
+}
+.btn{
+    border:none;
+    padding: 8px;
+    text-align: center;
+    border-radius: 7px;
+    color:cadetblue;
+    font-size: 17px;
+    font-weight:500;
+    cursor:pointer;
+}
+
 .centerAlignDiv{
     display:Flex;
     align-items: center;
@@ -19,4 +35,5 @@ h1{
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }

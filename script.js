@@ -12,6 +12,15 @@ function randomColor(){
     return randomRGB;
 }
 
+//function to increase opacity of divColumn
+
+opacity = 0;
+function increaseOpacity(){
+    opacity+= 0.1;
+    return opacity;
+
+}
+
 for(let i =0; i<=16; i++){
     let divRow = document.createElement('div');
     divRow.classList.add('row');
@@ -29,6 +38,7 @@ for(let i =0; i<=16; i++){
 document.querySelectorAll('.column').forEach(divColumn =>{
     divColumn.addEventListener('mouseover',()=>{
         divColumn.style.backgroundColor = randomColor();
+            divColumn.style.opacity += increaseOpacity();
      }
     )}
   );
